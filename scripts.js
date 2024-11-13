@@ -85,7 +85,8 @@ document.addEventListener("DOMContentLoaded", function() {
         "SQL Injection", "Cross-Site Scripting (XSS)", "Buffer Overflow",
         "Man-in-the-Middle", "Denial of Service (DoS)", "Rootkit",
         "Ransomware", "Keylogger", "Zero-Day Exploit", "Phishing Attack",
-        "Malware Injection", "Brute Force Attack", "Backdoor Exploit"
+        "Malware Injection", "Brute Force Attack", "Backdoor Exploit",
+        "Smishing Attack", "Sim Hijacking"
     ];
     
     function updateExploitList() {
@@ -156,22 +157,22 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Set intervals for updating metrics
     setInterval(() => updateCounter('compromise-counter', 1000), 3000);
-    setInterval(updateBreachLevel, 5000);
-    setInterval(updateExploitList, 7000);
+    setInterval(updateBreachLevel, 3000);
+    setInterval(updateExploitList, 5000);
     setInterval(updateExfilCounter, 2000);
-    setInterval(() => updateCounter('botnet-counter', 10000), 4000);
-    setInterval(() => updateCounter('ddos-counter', 50), 6000);
-    setInterval(() => updateCounter('zeroday-counter', 10), 10000);
-    setInterval(() => updateCounter('ransomware-counter', 100), 8000);
-    setInterval(updateNetworkConnections, 5000); // Update connections every 5 seconds
-    setInterval(updateVulnScanner, 3000);
-    setInterval(updateSocialEngineering, 7000);
-    setInterval(updateDarkWebActivity, 5000);
-    setInterval(updateDataExfilGraph, 5000);
+    setInterval(() => updateCounter('botnet-counter', 10000), 3000);
+    setInterval(() => updateCounter('ddos-counter', 50), 4000);
+    setInterval(() => updateCounter('zeroday-counter', 10), 5000);
+    setInterval(() => updateCounter('ransomware-counter', 100), 5000);
+    setInterval(updateNetworkConnections, 4000); // Update connections every 4 seconds
+    setInterval(updateVulnScanner, 4000);
+    setInterval(updateSocialEngineering, 4000);
+    setInterval(updateDarkWebActivity, 3000);
+    setInterval(updateDataExfilGraph, 3000);
     // Call this function to update the botnet size
-    setInterval(updateBotnetSize, 5000); // Update every 5 seconds
+    setInterval(updateBotnetSize, 3000); // Update every 3 seconds
 
     // Call this function to update the graph
-    setInterval(updateNetworkConnections, 5000); // Update connections every 5 seconds
+    setInterval(updateNetworkConnections, 3000); // Update connections every 3 seconds
     updateNetworkConnections(); // Initial call to display the graph immediately
 });
