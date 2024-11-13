@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const text = "CyberSecurity Engineer || Ethical Hacker || Red Teaming";
+    const text = "CyberSecurity Engineer || Ethical Hacker || Red Teamer";
     let i = 0;
     const element = document.querySelector(".intro-text");
     
@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
         } else {
             // Once typing finishes, show "Access Denied" message or other hacking effects
             setTimeout(() => {
-                element.innerHTML += "<br>[Warning: System Breach Detected]";
+                element.innerHTML += "<br>[Warning: Entering Suyog's World]";
             }, 800); // Delay before showing warning
         }
     }
@@ -105,19 +105,11 @@ document.addEventListener("DOMContentLoaded", function() {
         counter.innerText = count.toFixed(2) + ' GB';
     }
 
-    function updateNetworkMap() {
-        const mapVisual = document.getElementById('network-map-visual');
-        const colors = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff']; // Array of colors
-        const numNodes = 5; // Number of nodes
-        const nodes = Array(numNodes).fill().map((_, i) => {
-            const color = colors[Math.floor(Math.random() * colors.length)]; // Random color for each node
-            return `
-                <circle cx="${10 + i * 15}%" cy="${50 + Math.sin(i) * 10}" r="5" fill="${color}" />
-                <line x1="${10 + i * 15}%" y1="${50 + Math.sin(i) * 10}" x2="${10 + (i + 1) * 15}%" y2="${50 + Math.sin(i + 1) * 10}" stroke="${color}" />
-            `;
-        }).join('');
-
-        mapVisual.innerHTML = `<svg width="100%" height="100" xmlns="http://www.w3.org/2000/svg">${nodes}</svg>`;
+    function updateNetworkConnections() {
+        const counter = document.getElementById('network-infiltration-counter');
+        let connections = parseInt(counter.innerText) || 0; // Get current connections or start from 0
+        connections += Math.floor(Math.random() * 10); // Randomly increase connections by 0-9
+        counter.innerText = `${connections} Connections`; // Update the displayed connections
     }
 
     function updateVulnScanner() {
@@ -153,6 +145,15 @@ document.addEventListener("DOMContentLoaded", function() {
         graphContainer.innerHTML = `<svg width="100%" height="100" xmlns="http://www.w3.org/2000/svg">${nodes}</svg>`;
     }
 
+    // New function for heat map graph
+    function updateBotnetSize() {
+        const botnetCounter = document.getElementById('botnet-counter');
+        const heatMap = document.getElementById('botnet-heatmap');
+        let count = Math.floor(Math.random() * 100); // Random count for botnet size
+        botnetCounter.innerText = count; // Update counter
+        // Logic to update heat map visualization can be added here
+    }
+
     // Set intervals for updating metrics
     setInterval(() => updateCounter('compromise-counter', 1000), 3000);
     setInterval(updateBreachLevel, 5000);
@@ -162,12 +163,15 @@ document.addEventListener("DOMContentLoaded", function() {
     setInterval(() => updateCounter('ddos-counter', 50), 6000);
     setInterval(() => updateCounter('zeroday-counter', 10), 10000);
     setInterval(() => updateCounter('ransomware-counter', 100), 8000);
-    setInterval(updateNetworkMap, 5000);
+    setInterval(updateNetworkConnections, 5000); // Update connections every 5 seconds
     setInterval(updateVulnScanner, 3000);
     setInterval(updateSocialEngineering, 7000);
     setInterval(updateDarkWebActivity, 5000);
     setInterval(updateDataExfilGraph, 5000);
+    // Call this function to update the botnet size
+    setInterval(updateBotnetSize, 5000); // Update every 5 seconds
 
     // Call this function to update the graph
-    updateNetworkMap();
+    setInterval(updateNetworkConnections, 5000); // Update connections every 5 seconds
+    updateNetworkConnections(); // Initial call to display the graph immediately
 });
