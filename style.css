@@ -1,0 +1,136 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: black; /* Black background */
+    color: #00FF00; /* Bright green text */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+h1, h2, h3 {
+    color: #0f0; /* Bright green */
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.7);
+}
+
+/* Console Style */
+.console {
+    width: 80%;
+    max-width: 1200px;
+    height: 90%;
+    border: 3px solid #00FF00; /* Green border */
+    background-color: #1a1a1a; /* Dark gray background */
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Landing Section */
+.landing-container {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hacker-title {
+    font-size: 2.5em;
+    margin: 0;
+    text-transform: uppercase; /* Uppercase for a more aggressive look */
+}
+
+.intro-text {
+    font-size: 24px; /* Increased font size */
+    white-space: nowrap; /* Prevent text wrapping */
+    line-height: 1.5;
+    display: inline-block; /* Inline block for flicker effect */
+    animation: flicker 0.3s infinite; /* Flicker animation */
+}
+
+.cta-buttons a {
+    display: inline-block;
+    background-color: #0f0; /* Bright green */
+    color: black;
+    padding: 10px 20px;
+    margin: 20px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    text-decoration: none;
+    box-shadow: 0 0 10px #0f0;
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+.cta-buttons a:hover {
+    background-color: #004d00; /* Darker green on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* About Section */
+.about-container, .certifications-container, .project-container {
+    padding: 40px;
+    background-color: #1c1c1c; /* Dark gray background */
+    margin: 20px;
+    border-radius: 8px;
+}
+
+/* Projects Section */
+.project {
+    background-color: #222; /* Darker background for projects */
+    border: 1px solid #444; /* Dark border */
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.project h3 {
+    color: #0f0; /* Bright green */
+    font-size: 1.8em;
+}
+
+.project p {
+    font-size: 1.2em;
+}
+
+.project p strong {
+    color: #0f0; /* Bright green */
+}
+
+/* Certifications Section */
+.certifications-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.certifications-container li {
+    font-size: 1.2em;
+}
+
+/* Flicker Animation */
+@keyframes flicker {
+    0% { opacity: 1; }
+    20% { opacity: 0.2; }
+    40% { opacity: 1; }
+    60% { opacity: 0.2; }
+    80% { opacity: 1; }
+    100% { opacity: 0.2; }
+}
+
+.cursor {
+    display: inline-block;
+    width: 8px;
+    height: 30px;
+    background-color: #00FF00; /* Green cursor */
+    margin-left: 4px;
+    animation: blink 1s step-end infinite; /* Blinking cursor */
+}
+
+@keyframes blink {
+    50% { background-color: transparent; }
+}
