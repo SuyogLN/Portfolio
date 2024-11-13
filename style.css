@@ -17,6 +17,24 @@ body {
     overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
+/* Blackhat Body Styles */
+.blackhat-body {
+    background-color: #000;
+    color: #ff0000;
+    font-family: 'Orbitron', sans-serif;
+}
+
+/* Blackhat Container */
+.blackhat-container {
+    position: relative;
+    z-index: 1;
+    color: #ff0000;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
 /* Matrix Background */
 .matrix-background {
     position: fixed; /* Keep it in place */
@@ -131,6 +149,49 @@ body {
     box-shadow: 0 0 20px rgba(0, 204, 255, 0.5); /* Cyan glow */
 }
 
+/* Metrics Container */
+.metrics-container {
+    padding: 20px;
+    margin: 20px;
+    border-radius: 15px;
+    background-color: rgba(50, 50, 50, 0.8); /* Darker background for metrics */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* Light glow */
+    text-align: center;
+}
+
+.blackhat-dashboard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.blackhat-widget {
+    background-color: rgba(20, 20, 20, 0.8);
+    border: 2px solid #ff0000;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 0 10px #ff0000;
+    transition: all 0.3s ease;
+}
+
+.blackhat-widget:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #ff0000;
+}
+
+.breach-bar {
+    width: 100%;
+    height: 20px;
+    background-color: #ff0000; /* Red for breach level */
+    margin: 10px 0;
+}
+
+.counter {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
 /* Card Animation */
 .about-container.active, .certifications-container.active, .projects-container.active, .skills-container.active {
     animation: slideIn 0.5s forwards; /* Slide-in effect */
@@ -186,4 +247,79 @@ ul li {
 
 @keyframes blink {
     50% { background-color: transparent; }
+}
+
+/* Additional Styles for Metrics */
+.compromise-counter, .exfil-counter, .botnet-counter, .ddos-counter, .zeroday-counter, .ransomware-counter {
+    font-size: 36px;
+    font-weight: bold;
+    color: #ff0000;
+    text-shadow: 0 0 5px #ff0000;
+    animation: pulse 2s infinite;
+}
+
+.breach-meter {
+    height: 20px;
+    background-color: #000;
+    border: 1px solid #ff0000;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.breach-bar {
+    height: 100%;
+    width: 0%;
+    background-color: #ff0000;
+    box-shadow: 0 0 10px #ff0000;
+    transition: width 0.5s ease-in-out;
+}
+
+#exploit-list {
+    text-align: left;
+    color: #ff0000;
+    font-size: 14px;
+    max-height: 100px;
+    overflow-y: auto;
+}
+
+/* Specific Styles for Network Infiltration Map */
+.network-infiltration-map {
+    background-color: rgba(0, 0, 0, 0.8); /* Black background */
+    border: 2px solid #ff0000; /* Red border */
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5); /* Red glow */
+    transition: all 0.3s ease;
+    padding: 15px; /* Add padding for consistency */
+    border-radius: 5px; /* Rounded corners */
+    position: relative; /* Position relative for absolute children */
+}
+
+.network-graph {
+    height: 100px; /* Height for the network graph */
+    margin-bottom: 10px; /* Space between graph and counter */
+}
+
+.network-infiltration-map:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.7); /* Stronger glow on hover */
+}
+
+/* Specific Styles for Data Exfiltrated */
+.data-exfiltrated {
+    background-color: rgba(0, 0, 0, 0.8); /* Black background */
+    border: 2px solid #ff0000; /* Red border */
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5); /* Red glow */
+    transition: all 0.3s ease;
+    padding: 15px; /* Add padding for consistency */
+    border-radius: 5px; /* Rounded corners */
+    position: relative; /* Position relative for absolute children */
+}
+
+.data-exfiltrated .network-graph {
+    height: 100px; /* Height for the network graph */
+    margin-bottom: 10px; /* Space between graph and counter */
+}
+
+.data-exfiltrated:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.7); /* Stronger glow on hover */
 }
