@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Cybersecurity portfolio of a penetration tester">
-    <title>Suyog Cybersecurity Portfolio</title>
+    <title>Suyog Cybersecurity Portfolio & Dashboard</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="hacker-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
-<body>
+<body class="blackhat-body">
     <div class="matrix-background"></div>
     <div class="landing-container">
         <h1 class="hacker-title">Suyog's Cybersecurity Portfolio</h1>
@@ -61,6 +63,72 @@
         </ul>
     </div>
 
+    <div class="metrics-container">
+        <h2>Metrics</h2>
+        <div class="blackhat-dashboard">
+            <div class="blackhat-widget">
+                <h2>Systems Compromised</h2>
+                <div id="compromise-counter" class="counter">0</div>
+            </div>
+            <div class="blackhat-widget">
+                <h2>Firewall Breach</h2>
+                <div class="breach-meter">
+                    <div id="breach-bar" class="breach-bar"></div>
+                </div>
+            </div>
+            <div class="blackhat-widget">
+                <h2>Active Exploits</h2>
+                <div id="exploit-list" class="exploit-list"></div>
+            </div>
+            <div class="blackhat-widget data-exfiltrated">
+                <h2>Data Exfiltrated</h2>
+                <div class="network-graph" id="data-exfil-graph"></div>
+                <div id="exfil-counter" class="counter">0.00 GB</div>
+            </div>
+            <div class="blackhat-widget">
+                <h2>Botnet Size</h2>
+                <div id="botnet-counter" class="counter">0</div>
+            </div>
+            <div class="blackhat-widget">
+                <h2>DDoS Attacks</h2>
+                <div id="ddos-counter" class="counter">0</div>
+            </div>
+            <div class="blackhat-widget">
+                <h2>Zero-Day Exploits</h2>
+                <div id="zeroday-counter" class="counter">0</div>
+            </div>
+            <div class="blackhat-widget">
+                <h2>Ransomware Infections</h2>
+                <div id="ransomware-counter" class="counter">0</div>
+            </div>
+            <div class="blackhat-widget network-infiltration-map">
+                <h2>Network Infiltration Map</h2>
+                <div class="network-graph" id="network-map-visual"></div>
+                <div id="network-infiltration-counter" class="counter">0 Connections</div>
+            </div>
+            <div class="blackhat-widget">
+                <h2>Vulnerability Scanner</h2>
+                <div id="vuln-scan-progress" class="vuln-scan-progress"></div>
+            </div>
+            <div class="blackhat-widget">
+                <h2>Social Engineering Success</h2>
+                <div id="social-engineering-rate" class="counter">0% Success Rate</div>
+            </div>
+            <div class="blackhat-widget">
+                <h2>Dark Web Activity</h2>
+                <div id="dark-web-tracker" class="counter">0 Transactions</div>
+                <div style="background-color: black; padding: 20px; text-align: center;">
+                    <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExaTRmY2JldHZ0anlwdDltaHhjMjdka3BnYmpsdHM2MTd1Z3U3cGUyYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3oKIPlCroSFHV8uoko/giphy.webp" alt="GIF" style="max-width: 100%; height: auto;">
+                </div>
+            </div>
+            <div class="malware-box">
+                <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExeWYxdmRsNWF6Z2MwbWM5cmN5N3dob3pvb2drNXEzOTNsdjh6NGw4NyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/fUqv7zNVW2QaHqEgSg/giphy.webp" alt="Malware Animation" />
+            </div>
+        </div>
+    </div>
+
     <script src="scripts.js"></script>
+    <script src="blackhat-dashboard.js"></script>
+    <script src="matrix-effect.js"></script>
 </body>
 </html>
