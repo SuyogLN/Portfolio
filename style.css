@@ -282,7 +282,17 @@ ul li {
     overflow-y: auto;
 }
 
-/* Specific Styles for Network Infiltration Map */
+/* New styles for heat map */
+#botnet-heatmap {
+    display: none; /* Hide the heat map */
+}
+
+/* Remove GIF styles for dark web activity */
+.dark-web-tracker img {
+    display: none; /* Hide the GIF */
+}
+
+/* Remove old styles for network infiltration map */
 .network-infiltration-map {
     background-color: rgba(0, 0, 0, 0.8); /* Black background */
     border: 2px solid #ff0000; /* Red border */
@@ -290,36 +300,9 @@ ul li {
     transition: all 0.3s ease;
     padding: 15px; /* Add padding for consistency */
     border-radius: 5px; /* Rounded corners */
-    position: relative; /* Position relative for absolute children */
 }
 
-.network-graph {
-    height: 100px; /* Height for the network graph */
-    margin-bottom: 10px; /* Space between graph and counter */
-}
-
-.network-infiltration-map:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 30px rgba(255, 0, 0, 0.7); /* Stronger glow on hover */
-}
-
-/* Specific Styles for Data Exfiltrated */
-.data-exfiltrated {
-    background-color: rgba(0, 0, 0, 0.8); /* Black background */
-    border: 2px solid #ff0000; /* Red border */
-    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5); /* Red glow */
-    transition: all 0.3s ease;
-    padding: 15px; /* Add padding for consistency */
-    border-radius: 5px; /* Rounded corners */
-    position: relative; /* Position relative for absolute children */
-}
-
-.data-exfiltrated .network-graph {
-    height: 100px; /* Height for the network graph */
-    margin-bottom: 10px; /* Space between graph and counter */
-}
-
-.data-exfiltrated:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 30px rgba(255, 0, 0, 0.7); /* Stronger glow on hover */
+/* Ensure the network map visual has a defined height */
+#network-map-visual {
+    height: 100px; /* Set height for the line graph */
 }
