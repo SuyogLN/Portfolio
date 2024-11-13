@@ -8,42 +8,53 @@
 /* Global Styles */
 body {
     font-family: 'Courier New', Courier, monospace;
-    background-color: black; /* Black background */
+    background-color: #000; /* Black background */
     color: #00FF00; /* Bright green text */
-    height: 100vh;
+    min-height: 100vh; /* Allow the body to grow beyond the viewport height */
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    overflow: hidden;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-h1, h2, h3 {
-    color: #0f0; /* Bright green */
-    text-shadow: 0 0 10px rgba(0, 255, 0, 0.7);
-}
-
-/* Console Style */
-.console {
-    width: 80%;
-    max-width: 1200px;
-    height: 90%;
-    border: 3px solid #00FF00; /* Green border */
-    background-color: #1a1a1a; /* Dark gray background */
-    padding: 20px;
-    position: relative;
+/* Matrix Background */
+.matrix-background {
+    position: fixed; /* Keep it in place */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
+    z-index: -1;
+    pointer-events: none; /* Prevent interaction with the background */
 }
 
 /* Landing Section */
 .landing-container {
     text-align: center;
-    padding: 100px 20px;
+    padding: 60px;
+    background-color: rgba(0, 0, 0, 0.8); /* Darker background */
+    border-radius: 15px; /* More rounded corners */
+    box-shadow: 0 0 30px rgba(0, 255, 0, 0.7); /* Stronger green glow */
+    margin: 20px; /* Add margin to create space around the container */
+    transition: transform 0.3s; /* Smooth transition */
+    animation: fadeIn 1s; /* Fade-in effect */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.landing-container:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
 }
 
 .hacker-title {
-    font-size: 2.5em;
+    font-size: 3em; /* Increased font size */
     margin: 0;
     text-transform: uppercase; /* Uppercase for a more aggressive look */
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.7); /* Glow effect */
 }
 
 .intro-text {
@@ -54,61 +65,102 @@ h1, h2, h3 {
     animation: flicker 0.3s infinite; /* Flicker animation */
 }
 
+/* CTA Buttons */
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 .cta-buttons a {
     display: inline-block;
     background-color: #0f0; /* Bright green */
     color: black;
-    padding: 10px 20px;
-    margin: 20px;
+    padding: 15px 30px; /* Increased padding */
+    margin: 10px;
     border-radius: 5px;
-    font-size: 1.2em;
+    font-size: 1.5em; /* Increased font size */
     text-decoration: none;
-    box-shadow: 0 0 10px #0f0;
+    box-shadow: 0 0 10px #0f0, 0 0 20px #0f0; /* Glow effect */
     transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+    border: 2px solid #0f0; /* Green border */
 }
 
 .cta-buttons a:hover {
     background-color: #004d00; /* Darker green on hover */
-    transform: scale(1.05); /* Slightly enlarge on hover */
+    transform: scale(1.1); /* Slightly enlarge on hover */
 }
 
-/* About Section */
-.about-container, .certifications-container, .project-container {
+/* Section Styles */
+.about-container, .certifications-container, .projects-container, .skills-container {
+    display: none; /* Initially hidden */
     padding: 40px;
-    background-color: #1c1c1c; /* Dark gray background */
     margin: 20px;
-    border-radius: 8px;
+    border-radius: 15px;
+    transition: all 0.3s ease; /* Smooth transition */
+    position: relative; /* For absolute positioning of the glow */
+    overflow: hidden; /* Hide overflow for the glow effect */
 }
 
-/* Projects Section */
-.project {
-    background-color: #222; /* Darker background for projects */
-    border: 1px solid #444; /* Dark border */
+.about-container.active, .certifications-container.active, .projects-container.active, .skills-container.active {
+    display: block; /* Show when active */
+}
+
+/* Unique Styles for Each Section */
+.about-container {
+    background-color: rgba(30, 30, 30, 0.9); /* Darker gray */
+    border: 2px solid #0f0; /* Green border */
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5); /* Green glow */
+}
+
+.projects-container {
+    background-color: rgba(50, 50, 50, 0.9); /* Medium gray */
+    border: 2px solid #ffcc00; /* Yellow border */
+    box-shadow: 0 0 20px rgba(255, 204, 0, 0.5); /* Yellow glow */
+}
+
+.certifications-container {
+    background-color: rgba(40, 40, 40, 0.9); /* Dark gray */
+    border: 2px solid #ff0000; /* Red border */
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5); /* Red glow */
+}
+
+.skills-container {
+    background-color: rgba(20, 20, 20, 0.9); /* Very dark gray */
+    border: 2px solid #00ccff; /* Cyan border */
+    box-shadow: 0 0 20px rgba(0, 204, 255, 0.5); /* Cyan glow */
+}
+
+/* Card Animation */
+.about-container.active, .certifications-container.active, .projects-container.active, .skills-container.active {
+    animation: slideIn 0.5s forwards; /* Slide-in effect */
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Common Styles for All Sections */
+h2 {
+    text-align: center;
     margin-bottom: 20px;
-    padding: 15px;
-    border-radius: 8px;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.7); /* Subtle glow */
 }
 
-.project h3 {
-    color: #0f0; /* Bright green */
-    font-size: 1.8em;
-}
-
-.project p {
-    font-size: 1.2em;
-}
-
-.project p strong {
-    color: #0f0; /* Bright green */
-}
-
-/* Certifications Section */
-.certifications-container ul {
+ul {
     list-style-type: none;
     padding: 0;
 }
 
-.certifications-container li {
+ul li {
+    margin: 10px 0;
     font-size: 1.2em;
 }
 
@@ -122,6 +174,7 @@ h1, h2, h3 {
     100% { opacity: 0.2; }
 }
 
+/* Cursor Animation */
 .cursor {
     display: inline-block;
     width: 8px;
