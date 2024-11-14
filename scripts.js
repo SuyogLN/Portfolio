@@ -51,17 +51,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Toggle section visibility
     window.toggleSection = function(sectionId) {
-        const sections = ['about', 'projects', 'certifications', 'skills'];
+        const sections = ['about', 'projects', 'professional-experience', 'skills'];
         sections.forEach(id => {
             const section = document.getElementById(id);
             if (id === sectionId) {
-                // Toggle the active class to show/hide the section
                 section.classList.toggle('active');
-                // Show the section if it has the active class, otherwise hide it
                 section.style.display = section.classList.contains('active') ? 'block' : 'none';
             } else {
-                section.classList.remove('active'); // Remove active class from other sections
-                section.style.display = 'none'; // Hide other sections
+                section.classList.remove('active');
+                section.style.display = 'none';
             }
         });
     };

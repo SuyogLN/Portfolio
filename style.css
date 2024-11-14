@@ -110,7 +110,7 @@ body {
 }
 
 /* Section Styles */
-.about-container, .certifications-container, .projects-container, .skills-container {
+.about-container, .professional-experience-container, .projects-container, .skills-container {
     display: none; /* Initially hidden */
     padding: 40px;
     margin: 20px;
@@ -120,7 +120,7 @@ body {
     overflow: hidden; /* Hide overflow for the glow effect */
 }
 
-.about-container.active, .certifications-container.active, .projects-container.active, .skills-container.active {
+.about-container.active, .professional-experience-container.active, .projects-container.active, .skills-container.active {
     display: block; /* Show when active */
 }
 
@@ -137,7 +137,7 @@ body {
     box-shadow: 0 0 20px rgba(255, 204, 0, 0.5); /* Yellow glow */
 }
 
-.certifications-container {
+.professional-experience-container {
     background-color: rgba(40, 40, 40, 0.9); /* Dark gray */
     border: 2px solid #ff0000; /* Red border */
     box-shadow: 0 0 20px rgba(255, 0, 0, 0.5); /* Red glow */
@@ -193,7 +193,7 @@ body {
 }
 
 /* Card Animation */
-.about-container.active, .certifications-container.active, .projects-container.active, .skills-container.active {
+.about-container.active, .professional-experience-container.active, .projects-container.active, .skills-container.active {
     animation: slideIn 0.5s forwards; /* Slide-in effect */
 }
 
@@ -305,4 +305,21 @@ ul li {
 /* Ensure the network map visual has a defined height */
 #network-map-visual {
     height: 100px; /* Set height for the line graph */
+}
+
+h3 {
+    margin-bottom: 20px; /* Adjust the value as needed */
+    color: red; /* Set h3 elements to red */
+}
+
+.skills-container ul {
+    color: blue; /* Set the color of the unordered list to blue */
+}
+
+.skills-container li {
+    color: blue; /* Set the color of the list items to blue */
+}
+
+.underline {
+    text-decoration: underline; /* Underline the text */
 }
