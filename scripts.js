@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const text = "CyberSecurity Engineer || Ethical Hacker || Red Teamer";
+    const text = "CyberSecurity Engineer || Ethical Hacker || Red Teamer || PhD Aspirant";
     let i = 0;
     const element = document.querySelector(".intro-text");
     
@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
         } else {
             // Once typing finishes, show "Access Denied" message or other hacking effects
             setTimeout(() => {
-                element.innerHTML += "<br>[Warning: Entering Suyog's World]";
+                element.innerHTML += "<br>[Warning: Entering Suyog's Dimension]";
             }, 800); // Delay before showing warning
         }
     }
