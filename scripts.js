@@ -57,6 +57,9 @@ document.addEventListener("DOMContentLoaded", function() {
             if (id === sectionId) {
                 section.classList.toggle('active');
                 section.style.display = section.classList.contains('active') ? 'block' : 'none';
+                if (section.classList.contains('active')) {
+                    section.scrollIntoView({ behavior: 'smooth' }); // Smooth scroll to the section
+                }
             } else {
                 section.classList.remove('active');
                 section.style.display = 'none';

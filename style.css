@@ -124,29 +124,40 @@ body {
     display: block; /* Show when active */
 }
 
-/* Unique Styles for Each Section */
+/* About Me Section Styles */
 .about-container {
     background-color: rgba(30, 30, 30, 0.9); /* Darker gray */
-    border: 2px solid #0f0; /* Green border */
-    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5); /* Green glow */
+    border: 2px solid #00ccff; /* Cyan border */
+    box-shadow: 0 0 20px rgba(0, 204, 255, 0.5); /* Cyan glow */
+    color: #ffffff; /* White text */
+    transition: all 0.3s ease; /* Smooth transition */
 }
 
+/* Projects Section Styles */
 .projects-container {
     background-color: rgba(50, 50, 50, 0.9); /* Medium gray */
     border: 2px solid #ffcc00; /* Yellow border */
     box-shadow: 0 0 20px rgba(255, 204, 0, 0.5); /* Yellow glow */
+    color: #ffcc00; /* Yellow text */
+    transition: all 0.3s ease; /* Smooth transition */
 }
 
+/* Professional Experience Section Styles */
 .professional-experience-container {
     background-color: rgba(40, 40, 40, 0.9); /* Dark gray */
     border: 2px solid #ff0000; /* Red border */
     box-shadow: 0 0 20px rgba(255, 0, 0, 0.5); /* Red glow */
+    color: #ff0000; /* Red text */
+    transition: all 0.3s ease; /* Smooth transition */
 }
 
+/* Skills Section Styles */
 .skills-container {
     background-color: rgba(20, 20, 20, 0.9); /* Very dark gray */
-    border: 2px solid #00ccff; /* Cyan border */
-    box-shadow: 0 0 20px rgba(0, 204, 255, 0.5); /* Cyan glow */
+    border: 2px solid #00ff00; /* Green border */
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5); /* Green glow */
+    color: #00ff00; /* Green text */
+    transition: all 0.3s ease; /* Smooth transition */
 }
 
 /* Metrics Container */
