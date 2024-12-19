@@ -334,3 +334,61 @@ h3 {
 .underline {
     text-decoration: underline; /* Underline the text */
 }
+
+@media (max-width: 600px) {
+    body {
+        font-size: 14px; /* Adjust font size */
+    }
+
+    .landing-container {
+        padding: 20px; /* Reduce padding */
+        font-size: 1em; /* Adjust font size */
+    }
+
+    .cta-buttons a {
+        font-size: 1em; /* Reduce button text size */
+        padding: 10px 20px; /* Adjust padding */
+    }
+
+    .blackhat-dashboard {
+        grid-template-columns: 1fr; /* Single column layout */
+    }
+
+    .about-container, .professional-experience-container, .projects-container, .skills-container {
+        padding: 20px; /* Reduce padding */
+        margin: 10px; /* Reduce margin */
+    }
+
+    .hacker-title {
+        font-size: 2em; /* Reduce title size */
+    }
+
+    ul li {
+        font-size: 1em; /* Adjust list item size */
+    }
+}
+
+/* For medium screens (tablet) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .blackhat-dashboard {
+        grid-template-columns: repeat(2, 1fr); /* Two columns layout */
+    }
+
+    .cta-buttons a {
+        font-size: 1.2em; /* Slightly larger text */
+        padding: 12px 25px; /* Adjust padding */
+    }
+
+    .about-container, .professional-experience-container, .projects-container, .skills-container {
+        padding: 30px; /* Moderate padding */
+        margin: 15px; /* Moderate margin */
+    }
+
+    .hacker-title {
+        font-size: 2.5em; /* Adjust title size */
+    }
+
+    ul li {
+        font-size: 1.1em; /* Slightly larger list item size */
+    }
+}
