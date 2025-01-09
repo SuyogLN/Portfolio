@@ -392,3 +392,32 @@ h3 {
         font-size: 1.1em; /* Slightly larger list item size */
     }
 }
+
+/* Resume Section Styles */
+.resume-container {
+    display: none; /* Initially hidden */
+    padding: 40px;
+    margin: 20px;
+    border-radius: 15px;
+    background-color: rgba(30, 30, 30, 0.9); /* Darker gray */
+    border: 2px solid #00ccff; /* Cyan border */
+    box-shadow: 0 0 20px rgba(0, 204, 255, 0.5); /* Cyan glow */
+    color: #ffffff; /* White text */
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+.resume-container.active {
+    display: block; /* Show when active */
+}
+
+.resume-container a {
+    color: #00FF00; /* Bright green for links */
+    text-decoration: underline; /* Underline links */
+    font-size: 1.2em; /* Slightly larger font size for links */
+    margin: 10px 0; /* Margin for spacing */
+    display: inline-block; /* Make links block elements for better spacing */
+}
+
+.resume-container a:hover {
+    color: #00ccff; /* Change color on hover */
+}

@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Toggle section visibility
     window.toggleSection = function(sectionId) {
-        const sections = ['about', 'projects', 'professional-experience', 'skills'];
+        const sections = ['about', 'projects', 'professional-experience', 'skills', 'resume'];
         sections.forEach(id => {
             const section = document.getElementById(id);
             if (id === sectionId) {
